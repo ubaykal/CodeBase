@@ -1,0 +1,38 @@
+version: '3.9'
+
+services:
+  
+  postgres:
+    image: postgres:latest
+    build:
+      context: .
+      dockerfile: Presentation/ECommerce.API/Dockerfile
+    container_name: my-postgres-container
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: CodeBaseECommerce
+    ports:
+      - "5432:5432"
+    volumes:
+      - /data:/var/lib/postgresql/data
+  
+  ecommerce-api:
+    image: ${REGISTRY:-ecommerceapi}/ecommerce.api:${PLATFORM:-linux}-${TAG:-latest}
+    restart: on-failure
+    ports:
+      - '5000:80'
+    networks:
+      - services-network
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      postgres:
+        condition: service_started
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+
+networks:
+  services-network:
+    driver: bridge

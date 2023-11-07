@@ -1,0 +1,443 @@
+{
+	"info": {
+		"_postman_id": "d57c8dbe-1bd5-4171-b861-45700bbc7023",
+		"name": "CodeBase",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2899668"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userNameOrEmail\" : \"UBaykal\",\n    \"password\" : \"1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5016/codebase/api/Auth/Login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5016",
+							"path": [
+								"codebase",
+								"api",
+								"Auth",
+								"Login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RefreshToken",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"refreshToken\": \"WU5FTsVi8I9akpbc/1csX941/S+0AylqM9AQdTY3AQM=\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5016/codebase/api/Auth/RefreshTokenLogin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5016",
+							"path": [
+								"codebase",
+								"api",
+								"Auth",
+								"RefreshTokenLogin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Book",
+			"item": [
+				{
+					"name": "Stok Kontrolü",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiVUJheWthbCIsIlVzZXJJZCI6Ijg0MDhkYjg4LTA5YjgtNGVmZS1hZDFhLTNhMjRkMjkyZjJkZCIsIm5iZiI6MTY5OTMxMjU0MCwiZXhwIjoxNjk5MzE0MzQwLCJpc3MiOiJ3d3cuZWNvbW1lcmNlLmNvbSIsImF1ZCI6Ind3dy5jb2RlYmFzZS5jb20ifQ.bcgI2rQzp-WkF5zisoksRcFVAcNsu1BOrHNRaiP7ueo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5016/codebase/api/Book/StockControl?Id=7311a336-cd5e-4ce9-b51d-f1588bafc76b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5016",
+							"path": [
+								"codebase",
+								"api",
+								"Book",
+								"StockControl"
+							],
+							"query": [
+								{
+									"key": "Id",
+									"value": "7311a336-cd5e-4ce9-b51d-f1588bafc76b"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Yeni Kitap Kaydet",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiVUJheWthbCIsIlVzZXJJZCI6Ijg0MDhkYjg4LTA5YjgtNGVmZS1hZDFhLTNhMjRkMjkyZjJkZCIsIm5iZiI6MTY5OTMxMjU0MCwiZXhwIjoxNjk5MzE0MzQwLCJpc3MiOiJ3d3cuZWNvbW1lcmNlLmNvbSIsImF1ZCI6Ind3dy5jb2RlYmFzZS5jb20ifQ.bcgI2rQzp-WkF5zisoksRcFVAcNsu1BOrHNRaiP7ueo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"TEST\",\n  \"description\": \"DENEME\",\n  \"price\": 34.3,\n  \"stockQuantity\": 56\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5016/codebase/api/Book/Create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5016",
+							"path": [
+								"codebase",
+								"api",
+								"Book",
+								"Create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Kitap Bilgisi Güncelleme",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiVUJheWthbCIsIlVzZXJJZCI6Ijg0MDhkYjg4LTA5YjgtNGVmZS1hZDFhLTNhMjRkMjkyZjJkZCIsIm5iZiI6MTY5OTMxMjU0MCwiZXhwIjoxNjk5MzE0MzQwLCJpc3MiOiJ3d3cuZWNvbW1lcmNlLmNvbSIsImF1ZCI6Ind3dy5jb2RlYmFzZS5jb20ifQ.bcgI2rQzp-WkF5zisoksRcFVAcNsu1BOrHNRaiP7ueo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"7311a336-cd5e-4ce9-b51d-f1588bafc76b\",\n  \"stockQuantity\": 4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5016/codebase/api/Book/Update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5016",
+							"path": [
+								"codebase",
+								"api",
+								"Book",
+								"Update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Müşterilerin Siparişleri",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiVUJheWthbCIsIlVzZXJJZCI6Ijg0MDhkYjg4LTA5YjgtNGVmZS1hZDFhLTNhMjRkMjkyZjJkZCIsIm5iZiI6MTY5OTMxNzUzMCwiZXhwIjoxNjk5MzM3MzMwLCJpc3MiOiJ3d3cuZWNvbW1lcmNlLmNvbSIsImF1ZCI6Ind3dy5jb2RlYmFzZS5jb20ifQ.J8DBDIallrYblrt6JK5KF68HzvI5mGwwhreD-R37MKc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"page\": 0,\n  \"size\": 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5016/codebase/api/Customer/CustomerOrders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5016",
+							"path": [
+								"codebase",
+								"api",
+								"Customer",
+								"CustomerOrders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Kullanıcı Oluştur",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nameSurname\": \"Utku Baykal\",\n  \"userName\": \"utkubaykal\",\n  \"email\": \"utkus@gmail.com\",\n  \"PhoneNumber\" :\"05348888888\",\n  \"password\": \"1234\",\n  \"passwordConfirm\": \"1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5016/codebase/api/Customer/Create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5016",
+							"path": [
+								"codebase",
+								"api",
+								"Customer",
+								"Create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Statistic",
+			"item": [
+				{
+					"name": "Aylık İstatistik Raporu Al",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiVUJheWthbCIsIlVzZXJJZCI6Ijg0MDhkYjg4LTA5YjgtNGVmZS1hZDFhLTNhMjRkMjkyZjJkZCIsIm5iZiI6MTY5OTMxNDQzNiwiZXhwIjoxNjk5MzE2MjM2LCJpc3MiOiJ3d3cuZWNvbW1lcmNlLmNvbSIsImF1ZCI6Ind3dy5jb2RlYmFzZS5jb20ifQ.9YKbtifE9Oa52RdnvtoTFwdSZUTzSXQpqhwvRvqmiXg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"customerId\": \"d9ef4066-2c79-46f9-9b86-2199754a7c89\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5016/codebase/api/Statistics/MonthlyStatistic",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5016",
+							"path": [
+								"codebase",
+								"api",
+								"Statistics",
+								"MonthlyStatistic"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Sipariş Ver",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiVUJheWthbCIsIlVzZXJJZCI6Ijg0MDhkYjg4LTA5YjgtNGVmZS1hZDFhLTNhMjRkMjkyZjJkZCIsIm5iZiI6MTY5OTMxNzUzMCwiZXhwIjoxNjk5MzM3MzMwLCJpc3MiOiJ3d3cuZWNvbW1lcmNlLmNvbSIsImF1ZCI6Ind3dy5jb2RlYmFzZS5jb20ifQ.J8DBDIallrYblrt6JK5KF68HzvI5mGwwhreD-R37MKc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"productId\": \"a2a7c567-9166-4401-9f84-1ab5c6abfa36\",\n  \"quantity\": 1,\n  \"address\": {\n    \"district\": \"esenyurt\",\n    \"city\": \"istanbul\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5016/codebase/api/Order/Create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5016",
+							"path": [
+								"codebase",
+								"api",
+								"Order",
+								"Create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Müşteri Bazında Sipariş Sorgula",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiVUJheWthbCIsIlVzZXJJZCI6Ijg0MDhkYjg4LTA5YjgtNGVmZS1hZDFhLTNhMjRkMjkyZjJkZCIsIm5iZiI6MTY5OTMxNzUzMCwiZXhwIjoxNjk5MzM3MzMwLCJpc3MiOiJ3d3cuZWNvbW1lcmNlLmNvbSIsImF1ZCI6Ind3dy5jb2RlYmFzZS5jb20ifQ.J8DBDIallrYblrt6JK5KF68HzvI5mGwwhreD-R37MKc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"productId\": \"a2a7c567-9166-4401-9f84-1ab5c6abfa36\",\n  \"quantity\": 1,\n  \"address\": {\n    \"district\": \"esenyurt\",\n    \"city\": \"istanbul\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5016/codebase/api/Order/Create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5016",
+							"path": [
+								"codebase",
+								"api",
+								"Order",
+								"Create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tarih Aralığındaki Siparişleri Döner",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"pageIndex\": 1,\n  \"viewCount\": 15,\n  \"startDate\": \"2023-11-07T01:33:14.609Z\",\n  \"endDate\": \"2023-11-07T01:33:14.609Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5016/codebase/api/Customer/OrderDateFilter",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5016",
+							"path": [
+								"codebase",
+								"api",
+								"Customer",
+								"OrderDateFilter"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

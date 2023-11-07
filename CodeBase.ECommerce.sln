@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{B58761E6-3CDC-432A-B8D0-C603887469BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.API", "Presentation\ECommerce.API\ECommerce.API.csproj", "{67E09730-156D-45C1-A229-42082DE91A70}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{5B12469E-0C45-4489-AFA4-7218ABEF8E97}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{B36655B1-BDF7-4DAB-AFE5-C3488870A607}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.Application", "Core\ECommerce.Application\ECommerce.Application.csproj", "{90B67DAE-203F-4726-B9B2-6E602B71848F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.Domain", "Core\ECommerce.Domain\ECommerce.Domain.csproj", "{A1E23B09-8A6E-49EF-ACF2-67932901359B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.Infrastructure", "Infrastructure\ECommerce.Infrastructure\ECommerce.Infrastructure.csproj", "{40D3DCDF-8CC9-41F4-8B5D-32D8B4E31957}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.Persistence", "Infrastructure\ECommerce.Persistence\ECommerce.Persistence.csproj", "{B4A8A989-11F0-4B0C-BEE0-7E0BDB67531D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Soluation Items", "Soluation Items", "{EF76A327-5A2A-4908-BB4A-BD7461F14C79}"
+	ProjectSection(SolutionItems) = preProject
+		Dockerfile = Dockerfile
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67E09730-156D-45C1-A229-42082DE91A70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67E09730-156D-45C1-A229-42082DE91A70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67E09730-156D-45C1-A229-42082DE91A70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67E09730-156D-45C1-A229-42082DE91A70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90B67DAE-203F-4726-B9B2-6E602B71848F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90B67DAE-203F-4726-B9B2-6E602B71848F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90B67DAE-203F-4726-B9B2-6E602B71848F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90B67DAE-203F-4726-B9B2-6E602B71848F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1E23B09-8A6E-49EF-ACF2-67932901359B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1E23B09-8A6E-49EF-ACF2-67932901359B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1E23B09-8A6E-49EF-ACF2-67932901359B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1E23B09-8A6E-49EF-ACF2-67932901359B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40D3DCDF-8CC9-41F4-8B5D-32D8B4E31957}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40D3DCDF-8CC9-41F4-8B5D-32D8B4E31957}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40D3DCDF-8CC9-41F4-8B5D-32D8B4E31957}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40D3DCDF-8CC9-41F4-8B5D-32D8B4E31957}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4A8A989-11F0-4B0C-BEE0-7E0BDB67531D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4A8A989-11F0-4B0C-BEE0-7E0BDB67531D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4A8A989-11F0-4B0C-BEE0-7E0BDB67531D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4A8A989-11F0-4B0C-BEE0-7E0BDB67531D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{67E09730-156D-45C1-A229-42082DE91A70} = {B58761E6-3CDC-432A-B8D0-C603887469BA}
+		{90B67DAE-203F-4726-B9B2-6E602B71848F} = {5B12469E-0C45-4489-AFA4-7218ABEF8E97}
+		{A1E23B09-8A6E-49EF-ACF2-67932901359B} = {5B12469E-0C45-4489-AFA4-7218ABEF8E97}
+		{40D3DCDF-8CC9-41F4-8B5D-32D8B4E31957} = {B36655B1-BDF7-4DAB-AFE5-C3488870A607}
+		{B4A8A989-11F0-4B0C-BEE0-7E0BDB67531D} = {B36655B1-BDF7-4DAB-AFE5-C3488870A607}
+	EndGlobalSection
+EndGlobal
